@@ -10,6 +10,7 @@ namespace GreedyAlgorithmChangeMaking
     {
         static void Main(string[] args)
         {
+            #region Variable declarations
             List<decimal> denominationsList = new List<decimal>()
             {
                 0.25m,
@@ -25,12 +26,17 @@ namespace GreedyAlgorithmChangeMaking
                 0,
             };
             decimal total;
+            #endregion
 
+            #region Initial variable assignments
             int denominationsListIndex = 0;
+            #endregion
 
+            // Get input from user
             Console.WriteLine("What amount of money to make change for?");
             total = decimal.Parse(Console.ReadLine());
 
+            #region Algorithm logic
             do
             {
                 if (total >= denominationsList[denominationsListIndex])
@@ -43,7 +49,9 @@ namespace GreedyAlgorithmChangeMaking
                     denominationsListIndex++;
                 }
             } while (total > 0);
+            #endregion
 
+            // Result output
             Console.WriteLine("Coins used: ");
             for (int i = 0; i < denominationsList.Count; i++)
             {
