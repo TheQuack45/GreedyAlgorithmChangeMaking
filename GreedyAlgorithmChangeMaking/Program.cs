@@ -11,6 +11,10 @@ namespace GreedyAlgorithmChangeMaking
         static void Main(string[] args)
         {
             #region Variable declarations
+            decimal total;
+            #endregion
+
+            #region Initial variable assignments
             List<decimal> denominationsList = new List<decimal>()
             {
                 0.25m,
@@ -25,10 +29,6 @@ namespace GreedyAlgorithmChangeMaking
                 0,
                 0,
             };
-            decimal total;
-            #endregion
-
-            #region Initial variable assignments
             int denominationsListIndex = 0;
             #endregion
 
